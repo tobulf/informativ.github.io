@@ -1,11 +1,14 @@
-from microbit import *
+from microbit import*
 
-duty = 0
+power = 0
 
 while True:
-    while duty < 1023:
-        duty += 1
-        pin0.write_analog(duty)
-    while duty > 0:
-        duty -= 1
-        pin0.write_analog(duty)
+    while power < 1023:
+        power += 1
+        pin0.write_analog(power)
+        sleep(10)
+        
+    while power > 0:
+        power -= 1
+        pin0.write_analog(power)
+        sleep(10)
